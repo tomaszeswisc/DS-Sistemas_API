@@ -17,13 +17,13 @@ body {
   background-color: #f4f4f4; /*Cor do Fundo*/
 }
 
-main{
-    max-width: 900px; /*Define o espaço maximo da largura */
-    margin: 0 auto; /*Zera a margem superior/inferior e deixa automatica a direita/esquerda */
+main {
+  max-width: 900px; /*Define o espaço maximo da largura */
+  margin: 0 auto; /*Zera a margem superior/inferior e deixa automatica a direita/esquerda */
 }
 
 h1 {
-  color:#1f2937 /*Cor da Fonte*/
+  color: #1f2937; /*Cor da Fonte*/
 }
 
 h2 {
@@ -43,17 +43,21 @@ utilizamos o . e o nome criado para a class*/
 article {
   border: 2px solid #1f2937; /*Adiciona borda*/
   padding: 16px; /*espaçamento interno - superior, direito, inferior e esquerdo*/
-  margin-bottom: 16px; /*Define margem inferiro*/
-  width: auto; /*Define a largura*/
+  margin-bottom: 0; /*Define margem inferiro*/
+  width: 360px; /*Define a largura*/
+  max-width: 100%; /*Ocupa o espaço disponivel*/
   box-sizing: border-box; /*Garante que o tamanho fique dentro do tamanho definido*/
+  background-color: #ffffff; /*Cor do Fundo*/
 }
 
 img {
-    max-width: 100%; /*Ocupa largura maxima disponivel no elemento*/
-    height: auto; /*Define automatico de acodo com a largura*/
+  max-width: 100%; /*Ocupa largura maxima disponivel no elemento*/
+  height: auto; /*Define automatico de acodo com a largura*/
 }
 
-.lista-produtos{
-    display: flex;/*Muda o Display para Flexivel, colocando os elementos lado a lado*/
-    gap: 16px; /* Cria espaçamento entre os elementos*/
+.lista-produtos {
+  display: flex; /*Muda o Display para Flexivel, colocando os elementos lado a lado*/
+  gap: 16px; /* Cria espaçamento entre os elementos*/
+  flex-wrap: wrap; /*controla a quebra de linha */
+  align-items: flex-start;
 }
