@@ -1,14 +1,40 @@
 /*comentario em linha*/
 /*em bloco
 */
+/*Importação de Fonte via CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+/*Aparência incial do Catálogo*/
+
 h1 {
-    color: red;
+    color: red; /*Cor da Fonte*/
+}
+
+body {
+  font-family: "Roboto", sans-serif; /*Fonte importada e fonte alternativa*/
+  font-size: 16px; /*Tamanho da Fonte*/
+  line-height: 1.5; /*Espaçamento de Linhas*/
+  color:#333333; /*Cor da Fonte*/
+  background-color:#f4f4f4; /*Cor do Fundo*/
 }
 
 h2 {
-    color: blue;
+    color: #1f2937; /*Cor da Fonte*/
 }
 
-h3{
-    color: pink;
+/*quado for chamar uma class 
+utilizamos o . e o nome criado para a class*/
+.destaque {
+    color: #1F2937; /*Cor da Fonte*/
+    font-weight:bold ; /*Peso da Fonte*/
+    font-family: "Dancing Script", cursive; /*Fonte importada e fonte alternativa*/
+    font-size: 24px; /*Tamanho da Fonte*/
+}
+
+article {
+    border: 2px solid #1F2937; /*Adiciona borda*/
+    padding: 10px; /*espaçamento interno - superior, direito, inferior e esquerdo*/
+    margin-bottom: 16px; /*Define margem inferiro*/
+    width: 300px; /*Define a largura*/
 }
