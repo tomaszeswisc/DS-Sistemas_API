@@ -43,7 +43,7 @@ utilizamos o . e o nome criado para a class*/
 article {
   border: 2px solid #1f2937; /*Adiciona borda*/
   padding: 16px; /*espaçamento interno - superior, direito, inferior e esquerdo*/
-  margin-bottom: 0; /*Define margem inferiro*/
+  margin-bottom: 0; /*Define margem*/
   width: 360px; /*Define a largura*/
   max-width: 100%; /*Ocupa o espaço disponivel*/
   box-sizing: border-box; /*Garante que o tamanho fique dentro do tamanho definido*/
