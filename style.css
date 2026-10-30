@@ -2,39 +2,58 @@
 /*em bloco
 */
 /*Importação de Fonte via CSS*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 
 /*Aparência incial do Catálogo*/
 
-h1 {
-    color: red; /*Cor da Fonte*/
-}
-
 body {
+  margin: 0; /* Zera as margems apliando - superior, direito, inferior e esquerdo*/
+  padding: 24px; /*espaçamento interno - superior, direito, inferior e esquerdo*/
   font-family: "Roboto", sans-serif; /*Fonte importada e fonte alternativa*/
   font-size: 16px; /*Tamanho da Fonte*/
   line-height: 1.5; /*Espaçamento de Linhas*/
-  color:#333333; /*Cor da Fonte*/
-  background-color:#f4f4f4; /*Cor do Fundo*/
+  color: #333333; /*Cor da Fonte*/
+  background-color: #f4f4f4; /*Cor do Fundo*/
+}
+
+main{
+    max-width: 900px; /*Define o espaço maximo da largura */
+    margin: 0 auto; /*Zera a margem superior/inferior e deixa automatica a direita/esquerda */
+}
+
+h1 {
+  color:#1f2937 /*Cor da Fonte*/
 }
 
 h2 {
-    color: #1f2937; /*Cor da Fonte*/
+  color: #1f2937; /*Cor da Fonte*/
 }
 
 /*quado for chamar uma class 
 utilizamos o . e o nome criado para a class*/
 .destaque {
-    color: #1F2937; /*Cor da Fonte*/
-    font-weight:bold ; /*Peso da Fonte*/
-    font-family: "Dancing Script", cursive; /*Fonte importada e fonte alternativa*/
-    font-size: 24px; /*Tamanho da Fonte*/
+  color: #1f2937; /*Cor da Fonte*/
+  font-weight: bold; /*Peso da Fonte*/
+  font-family:
+    "Dancing Script", cursive; /*Fonte importada e fonte alternativa*/
+  font-size: 24px; /*Tamanho da Fonte*/
 }
 
 article {
-    border: 2px solid #1F2937; /*Adiciona borda*/
-    padding: 10px; /*espaçamento interno - superior, direito, inferior e esquerdo*/
-    margin-bottom: 16px; /*Define margem inferiro*/
-    width: 300px; /*Define a largura*/
+  border: 2px solid #1f2937; /*Adiciona borda*/
+  padding: 16px; /*espaçamento interno - superior, direito, inferior e esquerdo*/
+  margin-bottom: 16px; /*Define margem inferiro*/
+  width: auto; /*Define a largura*/
+  box-sizing: border-box; /*Garante que o tamanho fique dentro do tamanho definido*/
+}
+
+img {
+    max-width: 100%; /*Ocupa largura maxima disponivel no elemento*/
+    height: auto; /*Define automatico de acodo com a largura*/
+}
+
+.lista-produtos{
+    display: flex;/*Muda o Display para Flexivel, colocando os elementos lado a lado*/
+    gap: 16px; /* Cria espaçamento entre os elementos*/
 }
