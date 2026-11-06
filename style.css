@@ -44,7 +44,7 @@ article {
   border: 2px solid #1f2937; /*Adiciona borda*/
   padding: 16px; /*espaçamento interno - superior, direito, inferior e esquerdo*/
   margin-bottom: 0; /*Define margem*/
-  width: 360px; /*Define a largura*/
+  width: auto; /*Define a largura*/
   max-width: 100%; /*Ocupa o espaço disponivel*/
   box-sizing: border-box; /*Garante que o tamanho fique dentro do tamanho definido*/
   background-color: #ffffff; /*Cor do Fundo*/
@@ -56,8 +56,29 @@ img {
 }
 
 .lista-produtos {
-  display: flex; /*Muda o Display para Flexivel, colocando os elementos lado a lado*/
+ /* display: flex; Muda o Display para Flexivel, colocando os elementos lado a lado*/
+ /* flex-wrap: wrap; controla a quebra de linha */
+  display: grid;
+ /* grid-template-columns: 1fr 1fr 1fr; cria as colunas cada uma representada pela mesma fração*/ 
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px; /* Cria espaçamento entre os elementos*/
-  flex-wrap: wrap; /*controla a quebra de linha */
   align-items: flex-start;
+  min-width: 0;
+}
+
+/*Abaixo dos 900px*/
+@media(max-width: 900px){
+  .lista-produtos{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*abaixo de 440px*/
+@media(max-width: 440px){
+  h1{
+    color: red;
+  }
+  .lista-produtos{
+  grid-template-columns: 1fr;
+  }
 }
