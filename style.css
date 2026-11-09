@@ -25,9 +25,6 @@ utilizamos o . e o nome criado para a class
 /*Aparência incial do Catálogo*/
 
 body {
-  /*removido margin e padding*/
- /* margin: 0; /* Zera as margems apliando - superior, direito, inferior e esquerdo
-  padding: 24px; /*espaçamento interno - superior, direito, inferior e esquerdo*/
   font-family: "Roboto", sans-serif; /*Fonte importada e fonte alternativa*/
   font-size: 16px; /*Tamanho da Fonte*/
   line-height: 1.5; /*Espaçamento de Linhas*/
@@ -36,8 +33,9 @@ body {
 }
 
 main {
-  max-width: 900px; /*Define o espaço maximo da largura */
-  margin: 0 auto; /*Zera a margem superior/inferior e deixa automatica a direita/esquerda */
+  width: 90%; /*Define o espaço maximo da largura em porcentagem*/
+  margin: auto; /*Deixa a margem automatica*/
+  padding: 20px;
 }
 
 header{
@@ -64,51 +62,36 @@ nav a:hover{
   color: #fbbf24;
 }
 
-/*
-h1 {
-  color: #1f2937; Cor da Fonte
+section{
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px; /*arredonda as bordas*/
 }
 
-h2 {
-  color: #1f2937; Cor da Fonte
-}*/
+section h2{
+  margin-bottom: 15px;
+  color: #1f2937;
 
-/*quado for chamar uma class 
-utilizamos o . e o nome criado para a class
-/*.destaque {
-  color: #1f2937; Cor da Fonte
-  font-weight: bold; Peso da Fonte
-  font-family:
-    "Dancing Script", cursive; Fonte importada e fonte alternativa
-  font-size: 24px; Tamanho da Fonte
-}*/
+}
 
 .card {
-  border: 2px solid #1f2937; /*Adiciona borda*/
-  padding: 16px; /*espaçamento interno - superior, direito, inferior e esquerdo*/
-  margin-bottom: 0; /*Define margem*/
-  width: auto; /*Define a largura*/
-  max-width: 100%; /*Ocupa o espaço disponivel*/
-  box-sizing: border-box; /*Garante que o tamanho fique dentro do tamanho definido*/
-  background-color: #ffffff; /*Cor do Fundo*/
+  border: 1px solid #dddddd; /*Adiciona borda*/
+  padding: 20px; /*espaçamento interno - superior, direito, inferior e esquerdo*/
+  border-radius: 10px;
+  min-width: 0; /*Define a largura minima*/
+  text-align: center; /*alinha o texto ao centro*/
+  box-shadow:0 2px 5px rgba(0, 0, 0, 0.1); /*cria uma sombra valores em deslocamento
+  horizontal 0, vertical 2px suavizção 5px a cor em rgb com o alfa 0.1"porcentagem"*/
+  background-color: #f9fafb; /*Cor do Fundo*/
 }
 
-img {
-  max-width: 100%; /*Ocupa largura maxima disponivel no elemento*/
-  height: auto; /*Define automatico de acodo com a largura*/
+.card img {
+  width: 50%; /*Ocupa 50% largura disponivel no elemento*/
+  height: 100px; /*Define tamanho da largura*/
+  object-fit: cover; /*contralo como a imagem se acomda em sua caixa e 
+  cover preenche na proporção da caixa*/
 }
-
-/*modificado depois para class grid*/
-/*.lista-produtos {
-  display: flex; Muda o Display para Flexivel, colocando os elementos lado a lado
-  flex-wrap: wrap; controla a quebra de linha
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; cria as colunas cada uma representada pela mesma fração
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px; Cria espaçamento entre os elementos
-  align-items: flex-start;
-  min-width: 0;
-}*/
 
 .grid{
   display: grid;
