@@ -1,14 +1,32 @@
 /*comentario em linha*/
-/*em bloco
+/*
+em bloco
 */
+
+/*quado for chamar uma class 
+utilizamos o . e o nome criado para a class
+*/
+
+
 /*Importação de Fonte via CSS*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 
+
+/*Controle dos espaçoes iniciais*/
+/*Seletor * é o seletor universal*/
+*{
+  margin: 0; /*zerar as margens*/
+  padding: 0;/*zerar os paddings*/
+  box-sizing: border-box; /*defini os calculos pelo border-box*/
+}
+
+
 /*Aparência incial do Catálogo*/
 
 body {
-  margin: 0; /* Zera as margems apliando - superior, direito, inferior e esquerdo*/
+  /*removido margin e padding*/
+ /* margin: 0; /* Zera as margems apliando - superior, direito, inferior e esquerdo
   padding: 24px; /*espaçamento interno - superior, direito, inferior e esquerdo*/
   font-family: "Roboto", sans-serif; /*Fonte importada e fonte alternativa*/
   font-size: 16px; /*Tamanho da Fonte*/
@@ -22,25 +40,50 @@ main {
   margin: 0 auto; /*Zera a margem superior/inferior e deixa automatica a direita/esquerda */
 }
 
+header{
+  background-color:#1f2937; /*cor do fundo*/
+  color: #ffffff; /*cor da fonte*/
+  text-align: center; /*alinha os textos ao centro*/
+  padding: 30px; /* espaçamento para descolar o texto em ambas direções*/
+}
+
+nav{
+  background-color: #374151;
+  text-align: center;
+  padding: 15px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none; /*remove a linha do link*/
+  font-weight: bold; /*destaca a fonte "negrito"*/
+  margin: 0 15px; /*0 superior e inferior 15px esquerda e direita*/
+}
+
+nav a:hover{
+  color: #fbbf24;
+}
+
+/*
 h1 {
-  color: #1f2937; /*Cor da Fonte*/
+  color: #1f2937; Cor da Fonte
 }
 
 h2 {
-  color: #1f2937; /*Cor da Fonte*/
-}
+  color: #1f2937; Cor da Fonte
+}*/
 
 /*quado for chamar uma class 
-utilizamos o . e o nome criado para a class*/
-.destaque {
-  color: #1f2937; /*Cor da Fonte*/
-  font-weight: bold; /*Peso da Fonte*/
+utilizamos o . e o nome criado para a class
+/*.destaque {
+  color: #1f2937; Cor da Fonte
+  font-weight: bold; Peso da Fonte
   font-family:
-    "Dancing Script", cursive; /*Fonte importada e fonte alternativa*/
-  font-size: 24px; /*Tamanho da Fonte*/
-}
+    "Dancing Script", cursive; Fonte importada e fonte alternativa
+  font-size: 24px; Tamanho da Fonte
+}*/
 
-article {
+.card {
   border: 2px solid #1f2937; /*Adiciona borda*/
   padding: 16px; /*espaçamento interno - superior, direito, inferior e esquerdo*/
   margin-bottom: 0; /*Define margem*/
@@ -55,30 +98,39 @@ img {
   height: auto; /*Define automatico de acodo com a largura*/
 }
 
-.lista-produtos {
- /* display: flex; Muda o Display para Flexivel, colocando os elementos lado a lado*/
- /* flex-wrap: wrap; controla a quebra de linha */
+/*modificado depois para class grid*/
+/*.lista-produtos {
+  display: flex; Muda o Display para Flexivel, colocando os elementos lado a lado
+  flex-wrap: wrap; controla a quebra de linha
   display: grid;
- /* grid-template-columns: 1fr 1fr 1fr; cria as colunas cada uma representada pela mesma fração*/ 
+  grid-template-columns: 1fr 1fr 1fr; cria as colunas cada uma representada pela mesma fração
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px; /* Cria espaçamento entre os elementos*/
+  gap: 16px; Cria espaçamento entre os elementos
   align-items: flex-start;
   min-width: 0;
+}*/
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
+
 
 /*Abaixo dos 900px*/
 @media(max-width: 900px){
-  .lista-produtos{
+  .grid{
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /*abaixo de 440px*/
+/*está para resolução do iPhone 16 Pro Max para testes*/
 @media(max-width: 440px){
   h1{
     color: red;
   }
-  .lista-produtos{
+  .grid{
   grid-template-columns: 1fr;
   }
 }
