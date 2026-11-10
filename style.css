@@ -62,6 +62,11 @@ nav a:hover{
   color: #fbbf24;
 }
 
+nav a:focus, .card button:focus{
+  outline: 3px solid #fbbf24;
+  outline-offset: 3px;
+}
+
 section{
   background-color: #ffffff;
   padding: 20px;
@@ -81,9 +86,14 @@ section h2{
   border-radius: 10px;
   min-width: 0; /*Define a largura minima*/
   text-align: center; /*alinha o texto ao centro*/
-  box-shadow:0 2px 5px rgba(0, 0, 0, 0.1); /*cria uma sombra valores em deslocamento
+  box-shadow:0 2px 5px rgba(0, 0, 0, 0.3); /*cria uma sombra valores em deslocamento
   horizontal 0, vertical 2px suavizção 5px a cor em rgb com o alfa 0.1"porcentagem"*/
   background-color: #f9fafb; /*Cor do Fundo*/
+}
+
+.card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .card img {
@@ -93,10 +103,45 @@ section h2{
   cover preenche na proporção da caixa*/
 }
 
+.card h3 {
+
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.card p {
+  padding: 0 15px;
+  margin-bottom: 20px;
+  color: #555555;
+}
+
+.card button{
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #1d4ed8;
+}
+
+
 .grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+footer{
+  background-color: #1f2937;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
 }
 
 
