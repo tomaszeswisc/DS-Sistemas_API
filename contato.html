@@ -30,12 +30,37 @@
         <form class="form-contato">
           <div class="campo">
             <label>Nome</label>
-            <input type="text" id="name" name="nome">
+            <input type="text" id="name" name="nome" 
+            placeholder="Digite seu nome" required
+            minlength="2" maxlength="10">
           </div>
 
           <div class="campo">
             <label>E-mail</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" 
+            placeholder="seuemail@email.com" required>
+          </div>
+
+          <div class="campo">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto" required>
+              <option value="">Selecione um Assunto</option>
+              <option value="duvida">Dúvidas sobre o projeto</option>
+              <option value="produto">Informações sobre produto</option>
+              <option value="outro">Outro assunto</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" 
+            placeholder="Digite aqui sua Mensagem"
+            required minlength="10" maxlength="500"></textarea>
+          </div>
+
+          <div class="acoes-formulario">
+          <button type="submit">Enviar</button>
+          <button type="reset">Limpar</button>
           </div>
 
         </form>

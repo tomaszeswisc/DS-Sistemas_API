@@ -62,6 +62,7 @@ nav a:hover{
   color: #fbbf24;
 }
 
+/*Navegação via teclado*/
 nav a:focus, .card button:focus{
   outline: 3px solid #fbbf24;
   outline-offset: 3px;
@@ -144,7 +145,43 @@ footer{
   padding: 15px;
 }
 
+/*Formulario página de contato*/
 
+.form-contato{
+  max-width: 600px;
+  margin: 20px 0;
+}
+
+.campo{
+  margin-bottom: 15px;
+}
+.campo label{
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.campo input, 
+.campo select, 
+.campo textarea{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font: inherit;
+}
+
+/*navegação por teclado*/
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus,
+.acoes-formulario button:focus{
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* ----------------  RESPONSIVIDADE ------------------    */
 /*Abaixo dos 900px*/
 @media(max-width: 900px){
   .grid{
