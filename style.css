@@ -181,6 +181,55 @@ footer{
   outline-offset: 2px;
 }
 
+.acoes-formulario{
+  display: flex;
+  flex-wrap: wrap;/* permite outra linha quando necessario */
+  gap: 10px;
+}
+
+.acoes-formulario button{
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.acoes-formulario button:hover{
+  background-color: #1d4ed8;
+}
+
+.preferencia-contato{
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  min-width: 0;
+}
+
+.preferencia-contato legend{
+  padding: 0 5px;
+  font-weight: bold;  
+}
+
+.opcao-contato {
+  padding: 15px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.confirmacao-contato{
+  margin-bottom: 20px;
+}
+
+/*navegação por teclado*/
+.opcao-contato input:focus{
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
+}
+
 /* ----------------  RESPONSIVIDADE ------------------    */
 /*Abaixo dos 900px*/
 @media(max-width: 900px){
