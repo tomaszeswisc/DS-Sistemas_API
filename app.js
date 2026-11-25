@@ -201,3 +201,15 @@ console.log("Total: R$ " + total);
 alert(`Olá ${nome}, levando ${quantidade} ${produto}, o total é R$ ${total}`);
 */
 
+// Converter nao é validar
+
+console.log(Number("3")); // 3 number
+console.log(Number("")); // 0 number
+console.log(Number(" ")); // 0 number
+console.log(Number(null)); // 0 number
+console.log(Number("abc")); // NaN
+console.log(Number("1,5")); // NaN
+console.log(Number("1.5")); // 1.5 number
+console.log(Number("-2")); // -2 number
+
+console.log(typeof NaN); // number
